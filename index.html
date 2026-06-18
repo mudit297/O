@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Shinchu ❤️</title>
+<style>
+body{margin:0;font-family:Segoe UI,sans-serif;background:linear-gradient(135deg,#0f172a,#7c3aed,#ec4899);color:#fff;overflow-x:hidden}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;text-align:center}
+h1{font-size:3rem}
+.card{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);padding:25px;border-radius:25px;max-width:700px}
+.count{font-size:6rem;font-weight:bold}
+.timeline{max-width:700px;text-align:left}
+.timeline div{margin:20px 0;padding:15px;background:rgba(255,255,255,.1);border-radius:15px}
+.gallery img{width:220px;height:280px;object-fit:cover;border-radius:20px;border:4px solid white}
+button{padding:12px 22px;border:none;border-radius:30px}
+#typewriter{min-height:120px}
+</style>
+</head>
+<body>
+<section>
+<div class="card">
+<h1>🎉 Happy Birthday Shinchu ❤️</h1>
+<p>A special journey made with love.</p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>⏳ Countdown</h2>
+<div id="count" class="count">10</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>💌 Cinematic Intro</h2>
+<p>For the most beautiful girl in the world...</p>
+<p>Loading special memories...</p>
+</div>
+</section>
+
+<section>
+<div class="card gallery">
+<h2>📸 Our Memories</h2>
+<img id="slide" src="photo1.jpg">
+<div id="typewriter"></div>
+</div>
+</section>
+
+<section>
+<div class="card timeline">
+<h2>❤️ Love Story Timeline</h2>
+<div>✨ The day we met</div>
+<div>😊 The first smile</div>
+<div>🥰 Our favorite memory</div>
+<div>🌹 Every beautiful moment</div>
+<div>👑 Today: Your Birthday</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>💌 Envelope Letter</h2>
+<p>Dear Shinchu, thank you for bringing happiness into my life.</p>
+<p>Happy Birthday Princess ❤️</p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>🎂 Interactive Cake</h2>
+<p>Make a wish and blow out the candles ✨</p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>🎁 Surprise Gift</h2>
+<p>You are my favorite person and my happiest memory. ❤️</p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h1>💍 Forever Promise</h1>
+<p>No matter where life takes us, I will always cherish every memory with you.</p>
+<p><b>And just like the song says... I found the girl I was looking for. ❤️</b></p>
+</div>
+</section>
+
+<audio controls>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let c=10;
+setInterval(()=>{
+ if(c>=0){let e=document.getElementById('count'); if(e)e.innerText=c; c--;}
+},1000);
+
+let i=1;
+setInterval(()=>{
+ let img=document.getElementById('slide');
+ if(img){ i=i%6+1; img.src='photo'+i+'.jpg';}
+},2500);
+
+const msg="Happy Birthday Shinchu ❤️ Thank you for every smile, laugh and beautiful memory.";
+let p=0;
+function tw(){
+ let e=document.getElementById('typewriter');
+ if(e && p<msg.length){e.innerHTML+=msg.charAt(p++); setTimeout(tw,50);}
+}
+tw();
+</script>
+</body>
+</html>
